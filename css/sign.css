@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.box{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #231010;
+    text-align: center;
+}
+.box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.box input[type="text"],.box input[type="Password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type="text"]:focus,.box input[type="Password"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid red;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover{
+    background: #3498db;
+
+
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    display: flex;
+    background-color: beige;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: auto;
+    font-family: sans-serif;
+    
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+     
+}
+.nav,ul,li{
+    width: auto;
+    padding: 3px 25px 10px;
+    font-weight: 800;
+    font-family: sans-serif;
+
+}
+
+.nav,ul,li,a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.login,li,ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: small;
+}
+
+#bar{
+    padding: 14px;
+    border-radius: 51px;
+    margin: 23px;
+    width: 122%;
+    text-align: center;
+    border-style: solid;
+    border-color: aqua;
+    background-color: rgb(236, 226, 226);
+    color: black;
+    transition: 0.25;
+    display: block;
+    font-weight: 400;
+    
+}
+#bar:hover{
+    background-color: whitesmoke;
+}
+
+#footer{
+    background-color: rgb(44, 48, 48);
+    height: 120px;
+    overflow: hidden;
+    margin-top: 50%;
+    padding:12px 14px;
+    display: block;
+    width: auto;
+}
+
