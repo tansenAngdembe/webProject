@@ -1,15 +1,23 @@
 import { apiData } from "./api.js";
 import {createEle ,create_text_node} from "./createNode.js";
-
-const cardContent = document.getElementById("card-content")
-
+import { details } from "./details.js";
+// import {categoryData} from "./category.js";
+const gridCard = document.getElementById("gridCard")
+const categorys = document.getElementById("category")
 
 async function main() {
     const data = await apiData();
-    data.forEach((value,index)=>{
-         const {image,title,id,price, category} = value;
-         
-         if (category === "jewelery"){
+    // let categoryArray = [];
+       
+    
+    data.forEach((value,index)=>{         
+         const {image,title,id,price,description, category} = value;      
+              
+         let categoryDiv = createEle("div")
+         let categoryValue = create_text_node("Category")
+         categoryDiv.appendChild(categoryValue)
+         categorys.appendChild(categoryDiv)
+
          let card = createEle("div")// main card
          card.classList.add("card") 
          let cardimage = createEle("img"); // card images      
@@ -47,20 +55,19 @@ async function main() {
          cardOrginalPrice.appendChild(currencyPrice)
          cardOrginalPrice.classList.add("card-origin-price")
 
-
-
         cardDetails.appendChild(titles)
         cardDetails.appendChild(cardMoney)
         cardDetails.appendChild(cardOrginalPrice)
         card.appendChild(cardimage)   // appending card image in card      
         card.appendChild(cardDetails)// appending card details in card
-        
-        cardContent.appendChild(card)
-         
-         }
+        gridCard.appendChild(card)
+       
+       card.addEventListener("click",(event)=>{
+          event.preventDefault()
+          details(id,title,description,image,price)
+       })
 
-
-    })
+    })    
 
 }
 

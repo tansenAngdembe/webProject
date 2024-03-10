@@ -7,8 +7,7 @@ body{
     display: flex;
     background-color: beige;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: space-around;  
     width: auto;
     font-family: sans-serif;
     
