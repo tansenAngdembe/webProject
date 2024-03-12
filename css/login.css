@@ -33,12 +33,13 @@ body{
     transition: 0.25s;
 }
 
-.box input[type="text"]:focus,.box input[type="Password"]:focus{
+
+#box input[type="text"]:focus,.box input[type="Password"]:focus{
     width: 280px;
     border-color: #2ecc71;
 }
 
-.box input[type="submit"]{
+.box input[type="submit"], button{
     border: 0;
     background: none;
     display: block;
@@ -53,7 +54,7 @@ body{
     cursor: pointer;
 }
 
-.box input[type="submit"]:hover{
+button:hover{
     background: #3498db;
 
 

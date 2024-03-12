@@ -20,7 +20,8 @@ async function main() {
 
          let card = createEle("div")// main card
          card.classList.add("card") 
-         let cardimage = createEle("img"); // card images      
+         let cardimage = createEle("img"); // card images    
+         cardimage.classList.add("imageCard")  
          cardimage.src = image
          cardimage.id = id
          cardimage.alt = title.slice(0,15)
